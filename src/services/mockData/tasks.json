@@ -1,0 +1,57 @@
+[
+  {
+    "Id": 1,
+    "title": "Review quarterly budget proposal",
+    "description": "Analyze Q4 spending and prepare recommendations for next quarter",
+    "priority": "high",
+    "dueDate": "2024-12-20T17:00:00.000Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-12-15T09:30:00.000Z",
+    "updatedAt": "2024-12-15T09:30:00.000Z"
+  },
+  {
+    "Id": 2,
+    "title": "Update project documentation",
+    "description": "Add API endpoints and usage examples to developer guide",
+    "priority": "medium",
+    "dueDate": "2024-12-22T12:00:00.000Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-12-14T14:20:00.000Z",
+    "updatedAt": "2024-12-14T14:20:00.000Z"
+  },
+  {
+    "Id": 3,
+    "title": "Schedule team standup meetings",
+    "description": "Coordinate with team members to find optimal meeting times for January",
+    "priority": "low",
+    "dueDate": "2024-12-25T10:00:00.000Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-12-13T11:45:00.000Z",
+    "updatedAt": "2024-12-13T11:45:00.000Z"
+  },
+  {
+    "Id": 4,
+    "title": "Finish client presentation slides",
+    "description": "Complete slides for product demo and add customer testimonials",
+    "priority": "high",
+    "dueDate": "2024-12-19T16:00:00.000Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-12-15T08:15:00.000Z",
+    "updatedAt": "2024-12-15T08:15:00.000Z"
+  },
+  {
+    "Id": 5,
+    "title": "Order office supplies",
+    "description": "Restock printer paper, pens, and sticky notes",
+    "priority": "low",
+    "dueDate": "2024-12-28T14:00:00.000Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-12-12T15:30:00.000Z",
+    "updatedAt": "2024-12-12T15:30:00.000Z"
+  }
+]
