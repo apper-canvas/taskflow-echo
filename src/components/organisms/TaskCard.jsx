@@ -57,7 +57,7 @@ const TaskCard = ({ task, onToggleComplete, onUpdate, onDelete }) => {
         layout
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-white rounded-xl shadow-sm border-2 border-primary-200 p-6"
+className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border-2 border-primary-200 dark:border-primary-700 p-6"
       >
         <TaskFormFields
           formData={formData}
@@ -84,7 +84,7 @@ const TaskCard = ({ task, onToggleComplete, onUpdate, onDelete }) => {
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
       className={cn(
-        "bg-white rounded-xl shadow-sm border border-gray-200 p-6",
+"bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6",
         "transition-all duration-200 hover:shadow-md hover:-translate-y-0.5",
         task.completed && "opacity-60"
       )}
@@ -102,9 +102,9 @@ const TaskCard = ({ task, onToggleComplete, onUpdate, onDelete }) => {
             <div className="flex items-center gap-2 flex-1 min-w-0">
               <PriorityIndicator priority={task.priority} size="md" />
               <h3 
-                className={cn(
-                  "text-base font-semibold text-gray-900 truncate",
-                  task.completed && "line-through text-gray-500"
+className={cn(
+                  "text-base font-semibold text-gray-900 dark:text-gray-100 truncate",
+                  task.completed && "line-through text-gray-500 dark:text-gray-600"
                 )}
               >
                 {task.title}
@@ -117,9 +117,9 @@ const TaskCard = ({ task, onToggleComplete, onUpdate, onDelete }) => {
           </div>
 
           {task.description && (
-            <p className={cn(
-              "text-sm text-gray-600 mb-3 line-clamp-2",
-              task.completed && "text-gray-400"
+<p className={cn(
+              "text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2",
+              task.completed && "text-gray-400 dark:text-gray-500"
             )}>
               {task.description}
             </p>
@@ -139,7 +139,7 @@ const TaskCard = ({ task, onToggleComplete, onUpdate, onDelete }) => {
               variant="ghost"
               size="sm"
               onClick={() => onDelete(task.Id)}
-              className="text-xs text-red-600 hover:bg-red-50"
+className="text-xs text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20"
             >
               <ApperIcon name="Trash2" size={14} className="mr-1" />
               Delete

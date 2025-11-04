@@ -37,32 +37,32 @@ const DatePicker = ({ selectedDate, onDateSelect, onClose }) => {
 
   return (
     <div
-      ref={pickerRef}
-      className="absolute z-50 mt-2 bg-white rounded-xl shadow-lg border border-gray-200 p-4 w-80"
+ref={pickerRef}
+      className="absolute z-50 mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4 w-80"
     >
       <div className="flex items-center justify-between mb-4">
         <button
-          onClick={handlePrevMonth}
-          className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+onClick={handlePrevMonth}
+          className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
         >
-          <ApperIcon name="ChevronLeft" size={20} className="text-gray-600" />
+          <ApperIcon name="ChevronLeft" size={20} className="text-gray-600 dark:text-gray-400" />
         </button>
         
-        <h3 className="text-base font-semibold text-gray-900">
+        <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
           {format(currentMonth, "MMMM yyyy")}
         </h3>
 
         <button
-          onClick={handleNextMonth}
-          className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+onClick={handleNextMonth}
+          className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
         >
-          <ApperIcon name="ChevronRight" size={20} className="text-gray-600" />
+          <ApperIcon name="ChevronRight" size={20} className="text-gray-600 dark:text-gray-400" />
         </button>
       </div>
 
       <div className="grid grid-cols-7 gap-1 mb-2">
-        {weekDays.map(day => (
-          <div key={day} className="text-center text-xs font-medium text-gray-500 py-2">
+{weekDays.map(day => (
+          <div key={day} className="text-center text-xs font-medium text-gray-500 dark:text-gray-400 py-2">
             {day}
           </div>
         ))}
@@ -81,11 +81,11 @@ const DatePicker = ({ selectedDate, onDateSelect, onClose }) => {
               key={day.toISOString()}
               onClick={() => handleDateClick(day)}
               className={cn(
-                "aspect-square flex items-center justify-center text-sm rounded-lg transition-all duration-200",
-                "hover:bg-primary-50",
+"aspect-square flex items-center justify-center text-sm rounded-lg transition-all duration-200",
+                "hover:bg-primary-50 dark:hover:bg-primary-900/20",
                 isSelected && "bg-gradient-to-br from-primary-500 to-primary-600 text-white hover:from-primary-600 hover:to-primary-700",
-                !isSelected && isCurrentDay && "bg-gray-100 font-semibold",
-                !isSelected && !isCurrentDay && "text-gray-700"
+                !isSelected && isCurrentDay && "bg-gray-100 dark:bg-gray-700 font-semibold",
+                !isSelected && !isCurrentDay && "text-gray-700 dark:text-gray-300"
               )}
             >
               {format(day, "d")}
@@ -94,7 +94,7 @@ const DatePicker = ({ selectedDate, onDateSelect, onClose }) => {
         })}
       </div>
 
-      <div className="mt-4 pt-4 border-t border-gray-200 flex gap-2">
+<div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 flex gap-2">
         <Button
           variant="ghost"
           size="sm"

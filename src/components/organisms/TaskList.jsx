@@ -3,7 +3,7 @@ import TaskCard from "@/components/organisms/TaskCard";
 
 const TaskList = ({ tasks, onToggleComplete, onUpdate, onDelete }) => {
   return (
-    <div className="space-y-4">
+<div className="space-y-4 dark:bg-transparent">
       <AnimatePresence mode="popLayout">
         {tasks.map((task) => (
           <TaskCard
